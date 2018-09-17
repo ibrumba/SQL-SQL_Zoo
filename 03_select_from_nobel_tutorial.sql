@@ -51,3 +51,11 @@ AND p.yr NOT IN
   FROM nobel c
   WHERE c.subject = 'Chemistry'
 )
+-- Or with a "Union"
+Select * from nobel
+where yr = 1980 
+and subject = 'Physics'
+Union
+Select * from nobel
+where yr = 1984
+and subject = 'Chemistry';
